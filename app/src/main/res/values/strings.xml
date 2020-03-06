@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HelloWorld</string>
+    <string name="action_settings">Settings</string>
+    <string name="masa">Masa w kg</string>
+    <string name="wzrost">Wzrost w m</string>
+    <string name="policz">Policz</string>
+    <string name="wynik">Wynik</string>
+</resources>
