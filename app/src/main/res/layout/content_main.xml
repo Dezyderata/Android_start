@@ -9,51 +9,35 @@
     tools:showIn="@layout/activity_main">
 
     <TextView
-        android:id="@+id/wynik"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/wynik"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.827" />
-
-    <EditText
-        android:id="@+id/masa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="250dp"
-        android:ems="10"
-        android:hint="@string/masa"
-        android:inputType="numberDecimal"
+        android:id="@+id/tv_message"
+        android:layout_width="263dp"
+        android:layout_height="285dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="100dp"
+        android:text="Nie wiem po co chcesz sprawdzac te glupoty! Przeciez kazdy jest piekny;)"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/wzrost"
+    <Button
+        android:id="@+id/bt_launch_activity"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/wzrost"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="100dp"
+        android:text="@string/liczenie"
+        app:layout_constraintBottom_toTopOf="@+id/masa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent" />
-
-    <Button
-        android:id="@+id/policz"
-        android:layout_width="150dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="250dp"
-        android:text="@string/policz"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

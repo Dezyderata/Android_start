@@ -1,7 +1,7 @@
 package com.example.helloworld;
 
 import android.os.Bundle;
-
+import android.content.Intent;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -18,9 +18,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    float masa, wzrost;
-    Button policz;
-    String wzrostText, masaText;
+
+    private Button mBtLaunchActivity;
 
 
     @Override
@@ -29,7 +28,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        mBtLaunchActivity = (Button) findViewById(R.id.bt_launch_activity);
 
+        mBtLaunchActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                launchActivity();
+            }
+        });
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,30 +45,13 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
-        policz = findViewById(R.id.policz);
-        policz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                wzrostText = ((EditText)findViewById(R.id.wzrost)).getText().toString();
-                masaText = ((EditText)findViewById(R.id.masa)).getText().toString();
-
-                try{
-                    masa = Float.valueOf(masaText);
-                    wzrost = Float.valueOf(wzrostText);
-                    float BMI = masa/(wzrost*wzrost);
-                    TextView ans = findViewById(R.id.wynik);
-                    ans.setText(String.valueOf(BMI));
-                }catch (NumberFormatException err){
-                    Snackbar.make(v, "Incorect values!", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }
-
-            }
-        });
-
     }
 
+    private void launchActivity() {
+
+        Intent intent = new Intent(this, ProfileActivity.class);
+        startActivity(intent);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

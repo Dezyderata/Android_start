@@ -4,5 +4,11 @@
     <string name="masa">Masa w kg</string>
     <string name="wzrost">Wzrost w m</string>
     <string name="policz">Policz</string>
-    <string name="wynik">Wynik</string>
+    <string name="wynik">BMI</string>
+    <string name="kalorie">Ilosc kalori</string>
+    <string name="liczenie">Policz kalorie</string>
+    <string name="mezczyzna">Mezczyzna</string>
+    <string name="kobieta">Kobieta</string>
+    <string name="rozsadek">Rozsadek</string>
+    <string name="wiek">Wiek w latach</string>
 </resources>
