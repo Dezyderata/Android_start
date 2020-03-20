@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import androidx.appcompat.widget.AppCompatButton;
 
@@ -15,8 +16,8 @@ import com.google.android.material.snackbar.Snackbar;
 public class ProfileActivity extends AppCompatActivity {
 
     private Button mBtGoBack;
-    Boolean plec = null;
-    double masa, wzrost, wiek, kalorie = 0;
+    int plec;
+    double masa, wzrost, wiek = 0, kalorie = 0;
     Button policz;
     String wzrostText, masaText, wiekText, my_text;
 
@@ -35,10 +36,18 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
         policz = findViewById(R.id.policz);
+        final RadioGroup radioGroup = (RadioGroup)findViewById(R.id.plec);
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton cokolwiek = (RadioButton) findViewById(checkedId);
+                plec = radioGroup.indexOfChild(cokolwiek);
+            }
+        });
         policz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onRadioButtonClicked(v);
+
                countBMIAndCalories(v);
 
             }
@@ -52,12 +61,12 @@ public class ProfileActivity extends AppCompatActivity {
             masa = Double.valueOf(masaText);
             wzrost = Double.valueOf(wzrostText);
             wiek = Double.valueOf(wiekText);
-            if(this.plec){
+            if(this.plec == 0 && wiek != 0){
                 kalorie = 655.1 + (9.567 * masa) + (1.85 * wzrost * 100.0) - (4.68 * wiek);
                 TextView odpowiedz = findViewById(R.id.kalorie);
                 odpowiedz.setText(String.valueOf(kalorie));
             }
-            if(!this.plec){
+            if(this.plec == 1 && wiek != 0){
                 kalorie = 66.47 + 13.7*masa + 5.0*wzrost*100.0 - 6.76 * wiek;
                 TextView odpowiedz = findViewById(R.id.kalorie);
                 odpowiedz.setText(String.valueOf(kalorie));
@@ -87,7 +96,7 @@ public class ProfileActivity extends AppCompatActivity {
         }
 
     }
-
+/*
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -104,5 +113,5 @@ public class ProfileActivity extends AppCompatActivity {
     }
     public void countCallories(){
 
-    }
+    }*/
 }

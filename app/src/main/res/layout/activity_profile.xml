@@ -7,6 +7,7 @@
     tools:context=".ProfileActivity">
 
     <RadioGroup
+        android:id="@+id/plec"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -23,14 +24,12 @@
             android:id="@+id/kobieta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
             android:text="@string/kobieta" />
 
         <RadioButton
             android:id="@+id/mezczyzna"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
             android:text="@string/mezczyzna" />
     </RadioGroup>
 
