@@ -1,1 +1,5 @@
 /build
+/src/main/java/com/example/helloworld/FirstFragment.java
+/src/main/java/com/example/helloworld/SecondFragment.java
+/src/main/res/layout/fragment_first.xml
+/src/main/res/layout/fragment_second.xml

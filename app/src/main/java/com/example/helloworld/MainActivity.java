@@ -2,6 +2,8 @@ package com.example.helloworld;
 
 import android.os.Bundle;
 import android.content.Intent;
+
+import com.example.helloworld.ui.quiz.QuizFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -18,7 +20,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    private Button quiz;
+    private Button chart;
     private Button mBtLaunchActivity;
 
 
@@ -28,13 +31,29 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        mBtLaunchActivity = (Button) findViewById(R.id.bt_launch_activity);
+        quiz = findViewById(R.id.launch_quiz_activity);
+        chart = findViewById(R.id.launch_chart_activity);
+        mBtLaunchActivity = findViewById(R.id.bt_launch_activity);
 
         mBtLaunchActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                launchActivity();
+                launchBMIActivity();
+            }
+        });
+        quiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                launchQuizActivity();
+            }
+        });
+        chart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                launchChartActivity();
             }
         });
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -47,9 +66,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void launchActivity() {
+    private void launchBMIActivity() {
 
         Intent intent = new Intent(this, ProfileActivity.class);
+        startActivity(intent);
+    }
+    private void launchQuizActivity() {
+
+        Intent intent = new Intent(this, QuizFragment.class);
+        startActivity(intent);
+    }
+    private void launchChartActivity() {
+
+        Intent intent = new Intent(this, Chart.class);
         startActivity(intent);
     }
     @Override

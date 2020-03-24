@@ -9,9 +9,11 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import androidx.appcompat.widget.AppCompatButton;
 
 import com.google.android.material.snackbar.Snackbar;
+
+
+
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -96,22 +98,4 @@ public class ProfileActivity extends AppCompatActivity {
         }
 
     }
-/*
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.kobieta:
-                if (checked)
-                    this.plec = true;
-            case R.id.mezczyzna:
-                if (checked)
-                    this.plec = false;
-        }
-    }
-    public void countCallories(){
-
-    }*/
 }
