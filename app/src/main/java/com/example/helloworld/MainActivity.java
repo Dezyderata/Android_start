@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        //quiz = findViewById(R.id.launch_quiz_activity);
+        quiz = findViewById(R.id.launch_quiz_activity);
         chart = findViewById(R.id.launch_chart_activity);
         mBtLaunchActivity = findViewById(R.id.bt_launch_activity);
 
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 launchBMIActivity();
             }
         });
-        /**
+
         quiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
                 launchQuizActivity();
             }
         });
-         **/
         chart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,12 +68,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ProfileActivity.class);
         startActivity(intent);
     }
-    /**
+
     private void launchQuizActivity() {
 
-        Intent intent = new Intent(this, QuizFragment.class);
+        Intent intent = new Intent(this, QuizActivity.class);
         startActivity(intent);
-    }**/
+    }
     private void launchChartActivity() {
 
         Intent intent = new Intent(this, ChartActivity.class);
