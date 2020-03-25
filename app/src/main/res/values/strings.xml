@@ -14,7 +14,12 @@
     <string name="wykresy">Wykresy</string>
     <string name="quiz">Quiz</string>
     <string name="title_activity_chart">Chart</string>
+    <string name="pytanie">Czym można leczyc wirusa?</string>
     <string name="wroc">Wroc</string>
+    <string name="odp1">odp1</string>
+    <string name="odp2">odp2</string>
+    <string name="odp3">odp3</string>
+    <string name="odp4">odp4</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
