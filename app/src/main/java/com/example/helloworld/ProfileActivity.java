@@ -1,7 +1,5 @@
 package com.example.helloworld;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +7,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -72,6 +72,7 @@ public class ProfileActivity extends AppCompatActivity {
                 kalorie = 66.47 + 13.7*masa + 5.0*wzrost*100.0 - 6.76 * wiek;
                 TextView odpowiedz = findViewById(R.id.kalorie);
                 odpowiedz.setText(String.valueOf(kalorie));
+
             }
             if(kalorie == 0){
                 TextView odpowiedz = findViewById(R.id.kalorie);
