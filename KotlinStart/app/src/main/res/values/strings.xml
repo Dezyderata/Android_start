@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">KotlinStart</string>
+    <string name="mk">Choose your destiny!</string>
+    <string name="chart_string">Korona wykres</string>
+    <string name="bmi_string">BMI</string>
+    <string name="quiz_string">Quiz</string>
+    <string name="back">Wróć</string>
+    <string name="woman">Kobieta</string>
+    <string name="man">Mężczyzna</string>
+    <string name="calories">Ilość klorii</string>
+    <string name="mass">Masa w kg</string>
+    <string name="height">Wzrost w m</string>
+    <string name="age">Wiek w latach</string>
+    <string name="count">Policz</string>
+
+</resources>
